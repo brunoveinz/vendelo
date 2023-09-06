@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: 1234567890
+  host: localhost
+
+development:
+  <<: *default
+  database: vendelo_development
+  username: postgres
+  password: 1234567890
+
+test:
+  <<: *default
+  database: vendelo_test
+  username: postgres
+  password: 1234567890
+
+production:
+  <<: *default
+  database: vendelo_production
+  username: postgres
+  password: 1234567890
