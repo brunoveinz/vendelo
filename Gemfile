@@ -56,12 +56,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "letter_opener"
 end
 
 group :test do
@@ -69,6 +64,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "webmock"
 end
 
 gem "pg_search", "~> 2.3"
@@ -77,3 +73,15 @@ gem "pg_search", "~> 2.3"
 gem "pagy", "~> 6.0"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "view_component", "~> 3.5"
+
+gem "sidekiq", "~> 7.1"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "redis", "~> 5.0"
+
+gem "sentry-ruby", "~> 5.11"
+
+gem "sentry-rails", "~> 5.11"

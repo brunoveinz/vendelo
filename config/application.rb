@@ -28,5 +28,8 @@ module Vendelo
     #allow multiquery
     config.active_record.async_query_executor = :global_thread_pool
 
+    #background job
+    config.active_job.queue_adapter = :sidekiq
+
   end
 end

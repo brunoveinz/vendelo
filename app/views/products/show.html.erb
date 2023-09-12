@@ -1,10 +1,4 @@
-
-<%= image_tag @product.foto, width:100 if @product.foto.attached? %>
-<h1 class='title'> <%= @product.title %> </h1> 
-
-<p class='description'> <%= @product.description %> </p>
-
-<p class ='price'> <%= @product.price %> </p>
+<%= render partial: 'products/product_details', locals: { product: @product }%>
 
 <%= link_to t('.edit'), edit_product_path(@product) if @product.owner? %>
 
@@ -17,3 +11,5 @@
 
 
 <%= render partial: 'favorite', locals: { product: @product } %>
+
+<%= turbo_stream_from @product %>
